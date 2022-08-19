@@ -27,9 +27,10 @@ type LicensesApiService service
 
 /*
 LicensesApiService Extends Trial License For A Module
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body This is the details of the Trial License. ModuleType and edition are mandatory
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body This is the details of the Trial License. ModuleType and edition are mandatory
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoModuleLicense
 */
 func (a *LicensesApiService) ExtendTrialLicense(ctx context.Context, body StartTrial, accountIdentifier string) (ResponseDtoModuleLicense, *http.Response, error) {
@@ -148,8 +149,9 @@ func (a *LicensesApiService) ExtendTrialLicense(ctx context.Context, body StartT
 
 /*
 LicensesApiService Gets All Module License Information in Account
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoAccountLicense
 */
 func (a *LicensesApiService) GetAccountLicenses(ctx context.Context, accountIdentifier string) (ResponseDtoAccountLicense, *http.Response, error) {
@@ -266,9 +268,10 @@ func (a *LicensesApiService) GetAccountLicenses(ctx context.Context, accountIden
 
 /*
 LicensesApiService Get Allowed Actions Under Each Edition
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param moduleType A Harness Platform module.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param moduleType A Harness Platform module.
+
 @return ResponseDtoMapEditionSetEditionAction
 */
 func (a *LicensesApiService) GetEditionActions(ctx context.Context, accountIdentifier string, moduleType string) (ResponseDtoMapEditionSetEditionAction, *http.Response, error) {
@@ -386,8 +389,9 @@ func (a *LicensesApiService) GetEditionActions(ctx context.Context, accountIdent
 
 /*
 LicensesApiService Get Last Modified Time Under Each ModuleType
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoMapModuleTypeLong
 */
 func (a *LicensesApiService) GetLastModifiedTimeForAllModuleTypes(ctx context.Context, accountIdentifier string) (ResponseDtoMapModuleTypeLong, *http.Response, error) {
@@ -504,9 +508,10 @@ func (a *LicensesApiService) GetLastModifiedTimeForAllModuleTypes(ctx context.Co
 
 /*
 LicensesApiService Gets Module Licenses With Summary By Account And ModuleType
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param moduleType A Harness Platform module.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param moduleType A Harness Platform module.
+
 @return ResponseDtoLicensesWithSummary
 */
 func (a *LicensesApiService) GetLicensesAndSummary(ctx context.Context, accountIdentifier string, moduleType string) (ResponseDtoLicensesWithSummary, *http.Response, error) {
@@ -624,9 +629,10 @@ func (a *LicensesApiService) GetLicensesAndSummary(ctx context.Context, accountI
 
 /*
 LicensesApiService Gets Module License
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier The module license identifier
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier The module license identifier
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoModuleLicense
 */
 func (a *LicensesApiService) GetModuleLicenseById(ctx context.Context, identifier string, accountIdentifier string) (ResponseDtoModuleLicense, *http.Response, error) {
@@ -744,9 +750,10 @@ func (a *LicensesApiService) GetModuleLicenseById(ctx context.Context, identifie
 
 /*
 LicensesApiService Gets Module Licenses By Account And ModuleType
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param moduleType A Harness Platform module.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param moduleType A Harness Platform module.
+
 @return ResponseDtoListModuleLicense
 */
 func (a *LicensesApiService) GetModuleLicensesByAccountAndModuleType(ctx context.Context, accountIdentifier string, moduleType string) (ResponseDtoListModuleLicense, *http.Response, error) {
@@ -864,9 +871,10 @@ func (a *LicensesApiService) GetModuleLicensesByAccountAndModuleType(ctx context
 
 /*
 LicensesApiService Starts Free License For A Module
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param moduleType A Harness Platform module.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param moduleType A Harness Platform module.
+
 @return ResponseDtoModuleLicense
 */
 func (a *LicensesApiService) StartFreeLicense(ctx context.Context, accountIdentifier string, moduleType string) (ResponseDtoModuleLicense, *http.Response, error) {
@@ -984,9 +992,10 @@ func (a *LicensesApiService) StartFreeLicense(ctx context.Context, accountIdenti
 
 /*
 LicensesApiService Starts Trial License For A Module
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body This is the details of the Trial License. ModuleType and edition are mandatory
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body This is the details of the Trial License. ModuleType and edition are mandatory
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoModuleLicense
 */
 func (a *LicensesApiService) StartTrialLicense(ctx context.Context, body StartTrial, accountIdentifier string) (ResponseDtoModuleLicense, *http.Response, error) {

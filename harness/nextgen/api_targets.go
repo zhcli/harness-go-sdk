@@ -31,11 +31,10 @@ type TargetsApiService service
 /*
 TargetsApiService Creates a Target
 Create Targets for the given identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
 */
 func (a *TargetsApiService) CreateTarget(ctx context.Context, body Target, accountIdentifier string, orgIdentifier string) (*http.Response, error) {
 	var (
@@ -166,13 +165,12 @@ func (a *TargetsApiService) CreateTarget(ctx context.Context, body Target, accou
 /*
 TargetsApiService Deletes a Target
 Deletes a Target for the given identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier Unique identifier for the object in the API.
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier Unique identifier for the object in the API.
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
 */
 func (a *TargetsApiService) DeleteTarget(ctx context.Context, identifier string, accountIdentifier string, orgIdentifier string, projectIdentifier string, environmentIdentifier string) (*http.Response, error) {
 	var (
@@ -474,12 +472,13 @@ func (a *TargetsApiService) GetAllTargets(ctx context.Context, accountIdentifier
 /*
 TargetsApiService Returns details of a Target
 Returns details of a Target for the given identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier Unique identifier for the object in the API.
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier Unique identifier for the object in the API.
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
+
 @return Target
 */
 func (a *TargetsApiService) GetTarget(ctx context.Context, identifier string, accountIdentifier string, orgIdentifier string, projectIdentifier string, environmentIdentifier string) (Target, *http.Response, error) {
@@ -621,12 +620,13 @@ func (a *TargetsApiService) GetTarget(ctx context.Context, identifier string, ac
 /*
 TargetsApiService Returns Target Groups for the given Target
 Returns the Target Groups that the specified Target belongs to.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier Unique identifier for the object in the API.
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier Unique identifier for the object in the API.
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
+
 @return TargetDetail
 */
 func (a *TargetsApiService) GetTargetSegments(ctx context.Context, identifier string, accountIdentifier string, orgIdentifier string, projectIdentifier string, environmentIdentifier string) (TargetDetail, *http.Response, error) {
@@ -768,13 +768,14 @@ func (a *TargetsApiService) GetTargetSegments(ctx context.Context, identifier st
 /*
 TargetsApiService Modifies a Target
 Modifies a Target for the given account identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
- * @param identifier Unique identifier for the object in the API.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
+  - @param identifier Unique identifier for the object in the API.
+
 @return Target
 */
 func (a *TargetsApiService) ModifyTarget(ctx context.Context, body Target, accountIdentifier string, orgIdentifier string, projectIdentifier string, environmentIdentifier string, identifier string) (Target, *http.Response, error) {

@@ -30,9 +30,10 @@ type CloudCostPerspectiveReportsApiService service
 /*
 CloudCostPerspectiveReportsApiService Create a schedule for a Report
 Create a report schedule for the given Report ID or a Perspective ID.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body CEReportSchedule object to be saved
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body CEReportSchedule object to be saved
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoListCeReportSchedule
 */
 func (a *CloudCostPerspectiveReportsApiService) CreateReportSetting(ctx context.Context, body CeReportSchedule, accountIdentifier string) (ResponseDtoListCeReportSchedule, *http.Response, error) {
@@ -420,9 +421,10 @@ func (a *CloudCostPerspectiveReportsApiService) GetReportSetting(ctx context.Con
 /*
 CloudCostPerspectiveReportsApiService Update a cost Perspective Report
 Update cost Perspective Reports.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body CEReportSchedule object to be updated
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body CEReportSchedule object to be updated
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoListCeReportSchedule
 */
 func (a *CloudCostPerspectiveReportsApiService) UpdateReportSetting(ctx context.Context, body CeReportSchedule, accountIdentifier string) (ResponseDtoListCeReportSchedule, *http.Response, error) {

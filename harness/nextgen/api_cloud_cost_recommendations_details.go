@@ -165,9 +165,10 @@ func (a *CloudCostRecommendationsDetailsApiService) EcsRecommendationDetail(ctx 
 /*
 CloudCostRecommendationsDetailsApiService Return node pool Recommendation
 Returns node pool Recommendation details for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param id Node pool Recommendation identifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param id Node pool Recommendation identifier
+
 @return ResponseDtoNodeRecommendationDto
 */
 func (a *CloudCostRecommendationsDetailsApiService) NodeRecommendationDetail(ctx context.Context, accountIdentifier string, id string) (ResponseDtoNodeRecommendationDto, *http.Response, error) {

@@ -29,10 +29,11 @@ type UserGroupApiService service
 
 /*
 UserGroupApiService Get a User Group in an account/org/project
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body List of scopes
- * @param accountIdentifier Account Identifier for the Entity.
- * @param groupIdentifier groupIdentifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body List of scopes
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param groupIdentifier groupIdentifier
+
 @return ResponseDtoBoolean
 */
 func (a *UserGroupApiService) CopyUserGroup(ctx context.Context, body []Scope, accountIdentifier string, groupIdentifier string) (ResponseDtoBoolean, *http.Response, error) {
@@ -424,9 +425,10 @@ func (a *UserGroupApiService) DeleteUserGroup(ctx context.Context, accountIdenti
 
 /*
 UserGroupApiService List the User Groups selected by a filter in an account/org/project
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body User Group Filter
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body User Group Filter
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoListUserGroup
 */
 func (a *UserGroupApiService) GetBatchUsersGroupList(ctx context.Context, body UserGroupFilter, accountIdentifier string) (ResponseDtoListUserGroup, *http.Response, error) {

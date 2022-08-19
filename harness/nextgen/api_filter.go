@@ -867,9 +867,10 @@ func (a *FilterApiService) PipelinegetFilter(ctx context.Context, accountIdentif
 
 /*
 FilterApiService Creates a Filter
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Details of the Connector to create
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Details of the Connector to create
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoFilter
 */
 func (a *FilterApiService) PipelinepostFilter(ctx context.Context, body Filter, accountIdentifier string) (ResponseDtoFilter, *http.Response, error) {
@@ -988,9 +989,10 @@ func (a *FilterApiService) PipelinepostFilter(ctx context.Context, body Filter, 
 
 /*
 FilterApiService Updates the Filter
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body This is the updated Filter. This should have all the fields not just the updated ones
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body This is the updated Filter. This should have all the fields not just the updated ones
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoFilter
 */
 func (a *FilterApiService) PipelineupdateFilter(ctx context.Context, body Filter, accountIdentifier string) (ResponseDtoFilter, *http.Response, error) {
@@ -1109,9 +1111,10 @@ func (a *FilterApiService) PipelineupdateFilter(ctx context.Context, body Filter
 
 /*
 FilterApiService Creates a Filter
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Details of the Connector to create
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Details of the Connector to create
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoFilter
 */
 func (a *FilterApiService) PostFilter(ctx context.Context, body Filter, accountIdentifier string) (ResponseDtoFilter, *http.Response, error) {
@@ -1230,9 +1233,10 @@ func (a *FilterApiService) PostFilter(ctx context.Context, body Filter, accountI
 
 /*
 FilterApiService Updates the Filter
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body This is the updated Filter. This should have all the fields not just the updated ones
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body This is the updated Filter. This should have all the fields not just the updated ones
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoFilter
 */
 func (a *FilterApiService) UpdateFilter(ctx context.Context, body Filter, accountIdentifier string) (ResponseDtoFilter, *http.Response, error) {

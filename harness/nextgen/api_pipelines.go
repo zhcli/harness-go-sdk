@@ -203,11 +203,12 @@ func (a *PipelinesApiService) DeletePipeline(ctx context.Context, accountIdentif
 
 /*
 PipelinesApiService Get the Execution Node by Execution Id
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param orgIdentifier Organization Identifier for the Entity.
- * @param projectIdentifier Project Identifier for the Entity.
- * @param nodeExecutionId Id for the corresponding Node Execution
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param orgIdentifier Organization Identifier for the Entity.
+  - @param projectIdentifier Project Identifier for the Entity.
+  - @param nodeExecutionId Id for the corresponding Node Execution
+
 @return ResponseDtoExecutionNode
 */
 func (a *PipelinesApiService) GetExecutionNode(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, nodeExecutionId string) (ResponseDtoExecutionNode, *http.Response, error) {
@@ -999,9 +1000,10 @@ func (a *PipelinesApiService) GetPipelineSummary(ctx context.Context, accountIde
 
 /*
 PipelinesApiService Gets all the Steps for given Category (V2 Version)
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Step Pallete Filter request body
- * @param accountId Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Step Pallete Filter request body
+  - @param accountId Account Identifier for the Entity.
+
 @return ResponseDtoStepCategory
 */
 func (a *PipelinesApiService) GetStepsV2(ctx context.Context, body StepPalleteFilterWrapper, accountId string) (ResponseDtoStepCategory, *http.Response, error) {
@@ -1305,11 +1307,12 @@ func (a *PipelinesApiService) PostPipeline(ctx context.Context, body string, acc
 
 /*
 PipelinesApiService Validate a Pipeline YAML with Schema
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Pipeline YAML
- * @param accountIdentifier Account Identifier for the Entity.
- * @param orgIdentifier Organization Identifier for the Entity.
- * @param projectIdentifier Project Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Pipeline YAML
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param orgIdentifier Organization Identifier for the Entity.
+  - @param projectIdentifier Project Identifier for the Entity.
+
 @return ResponseDtoString
 */
 func (a *PipelinesApiService) PostPipeline1(ctx context.Context, body string, accountIdentifier string, orgIdentifier string, projectIdentifier string) (ResponseDtoString, *http.Response, error) {
@@ -1440,11 +1443,12 @@ func (a *PipelinesApiService) PostPipeline1(ctx context.Context, body string, ac
 
 /*
 PipelinesApiService Validate a Pipeline with Schema
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param orgIdentifier Organization Identifier for the Entity.
- * @param projectIdentifier Project Identifier for the Entity.
- * @param pipelineIdentifier Pipeline Identifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param orgIdentifier Organization Identifier for the Entity.
+  - @param projectIdentifier Project Identifier for the Entity.
+  - @param pipelineIdentifier Pipeline Identifier
+
 @return ResponseDtoString
 */
 func (a *PipelinesApiService) PostPipeline2(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, pipelineIdentifier string) (ResponseDtoString, *http.Response, error) {

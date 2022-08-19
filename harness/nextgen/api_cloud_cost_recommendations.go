@@ -27,9 +27,10 @@ type CloudCostRecommendationsApiService service
 /*
 CloudCostRecommendationsApiService Return the list of Recommendations
 Returns the list of Cloud Cost Recommendations for the specified filters.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Recommendations filter body.
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Recommendations filter body.
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoRecommendations
 */
 func (a *CloudCostRecommendationsApiService) ListRecommendations(ctx context.Context, body K8sRecommendationFilter, accountIdentifier string) (ResponseDtoRecommendations, *http.Response, error) {
@@ -149,9 +150,10 @@ func (a *CloudCostRecommendationsApiService) ListRecommendations(ctx context.Con
 /*
 CloudCostRecommendationsApiService Return the list of filter values for the Recommendations
 Returns the list of filter values for all the specified filters.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Recommendation Filter Values Body.
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Recommendation Filter Values Body.
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoListFilterStats
 */
 func (a *CloudCostRecommendationsApiService) RecommendationFilterValues(ctx context.Context, body FilterValues, accountIdentifier string) (ResponseDtoListFilterStats, *http.Response, error) {
@@ -271,9 +273,10 @@ func (a *CloudCostRecommendationsApiService) RecommendationFilterValues(ctx cont
 /*
 CloudCostRecommendationsApiService Return Recommendations statistics
 Returns the Cloud Cost Recommendations statistics for the specified filiters.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Recommendations filter body.
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Recommendations filter body.
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoRecommendationOverviewStats
 */
 func (a *CloudCostRecommendationsApiService) RecommendationStats(ctx context.Context, body K8sRecommendationFilter, accountIdentifier string) (ResponseDtoRecommendationOverviewStats, *http.Response, error) {
@@ -393,9 +396,10 @@ func (a *CloudCostRecommendationsApiService) RecommendationStats(ctx context.Con
 /*
 CloudCostRecommendationsApiService Return the number of Recommendations
 Returns the total number of Cloud Cost Recommendations based on the specified filters.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Recommendations filter body.
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Recommendations filter body.
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoInteger
 */
 func (a *CloudCostRecommendationsApiService) RecommendationsCount(ctx context.Context, body K8sRecommendationFilter, accountIdentifier string) (ResponseDtoInteger, *http.Response, error) {

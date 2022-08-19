@@ -28,11 +28,12 @@ type CloudCostAutoStoppingFixedSchedulesApiService service
 /*
 CloudCostAutoStoppingFixedSchedulesApiService Create a fixed schedule for an AutoStopping Rule
 Creates an AutoStopping rule to run resources based on the schedule.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Fixed schedule payload
- * @param cloudAccountId Connector ID
- * @param accountIdentifier Account Identifier for the Entity
- * @param accountId Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Fixed schedule payload
+  - @param cloudAccountId Connector ID
+  - @param accountIdentifier Account Identifier for the Entity
+  - @param accountId Account Identifier for the Entity
+
 @return FixedSchedule
 */
 func (a *CloudCostAutoStoppingFixedSchedulesApiService) CreateAutoStoppingSchedules(ctx context.Context, body SaveStaticSchedulesRequest, cloudAccountId string, accountIdentifier string, accountId string) (FixedSchedule, *http.Response, error) {
@@ -134,10 +135,11 @@ func (a *CloudCostAutoStoppingFixedSchedulesApiService) CreateAutoStoppingSchedu
 /*
 CloudCostAutoStoppingFixedSchedulesApiService Delete a fixed schedule for AutoStopping Rule.
 Deletes a fixed schedule for the given AutoStopping Rule.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param scheduleId ID of a fixed schedule added to an AutoStopping rule
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param scheduleId ID of a fixed schedule added to an AutoStopping rule
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return InlineResponse2001
 */
 func (a *CloudCostAutoStoppingFixedSchedulesApiService) DeleteAutoStoppingSchedule(ctx context.Context, accountId string, scheduleId float64, accountIdentifier string) (InlineResponse2001, *http.Response, error) {
@@ -237,12 +239,13 @@ func (a *CloudCostAutoStoppingFixedSchedulesApiService) DeleteAutoStoppingSchedu
 /*
 CloudCostAutoStoppingFixedSchedulesApiService Return all the AutoStopping Rule fixed schedules
 Returns all the AutoStopping Rule fixed schedules for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param cloudAccountId Connector ID
- * @param accountIdentifier Account Identifier for the Entity
- * @param resId IDs of resources whose fixed schedules are to be fetched. This can be an AutoStopping rule ID if the res_type is \&quot;autostop_rule\&quot;
- * @param resType Type of resource to which schedules are attached
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param cloudAccountId Connector ID
+  - @param accountIdentifier Account Identifier for the Entity
+  - @param resId IDs of resources whose fixed schedules are to be fetched. This can be an AutoStopping rule ID if the res_type is \&quot;autostop_rule\&quot;
+  - @param resType Type of resource to which schedules are attached
+
 @return FixedSchedulesListResponse
 */
 func (a *CloudCostAutoStoppingFixedSchedulesApiService) ListAutoStoppingSchedules(ctx context.Context, accountId string, cloudAccountId string, accountIdentifier string, resId string, resType string) (FixedSchedulesListResponse, *http.Response, error) {

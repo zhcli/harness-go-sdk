@@ -442,9 +442,10 @@ func (a *AuditFiltersApiService) GetAuditFilterList(ctx context.Context, account
 
 /*
 AuditFiltersApiService Creates a Filter
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Details of the Filter to create
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Details of the Filter to create
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoFilter
 */
 func (a *AuditFiltersApiService) PostAuditFilter(ctx context.Context, body Filter, accountIdentifier string) (ResponseDtoFilter, *http.Response, error) {
@@ -563,9 +564,10 @@ func (a *AuditFiltersApiService) PostAuditFilter(ctx context.Context, body Filte
 
 /*
 AuditFiltersApiService Updates the Filter of type Audit
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body This is the updated Filter. This should have all the fields not just the updated ones
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body This is the updated Filter. This should have all the fields not just the updated ones
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoFilter
 */
 func (a *AuditFiltersApiService) UpdateAuditFilter(ctx context.Context, body Filter, accountIdentifier string) (ResponseDtoFilter, *http.Response, error) {

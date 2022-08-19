@@ -263,9 +263,10 @@ func (a *AccountSettingApiService) List(ctx context.Context, accountIdentifier s
 
 /*
 AccountSettingApiService Updates account settings
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Details of the AccountSetting to create
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Details of the AccountSetting to create
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoAccountSettingResponse
 */
 func (a *AccountSettingApiService) UpdateAccountSetting(ctx context.Context, body AccountSettings, accountIdentifier string) (ResponseDtoAccountSettingResponse, *http.Response, error) {

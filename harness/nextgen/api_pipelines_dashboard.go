@@ -26,14 +26,15 @@ type PipelinesDashboardApiService service
 
 /*
 PipelinesDashboardApiService Fetches Pipeline Executions details for a given Interval and will be presented in day wise format
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param orgIdentifier Organization Identifier for the Entity.
- * @param projectIdentifier Project Identifier for the Entity.
- * @param pipelineIdentifier Pipeline Identifier
- * @param moduleInfo The module from which execution was triggered.
- * @param startTime Start Date Epoch time in ms
- * @param endTime End Date Epoch time in ms
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param orgIdentifier Organization Identifier for the Entity.
+  - @param projectIdentifier Project Identifier for the Entity.
+  - @param pipelineIdentifier Pipeline Identifier
+  - @param moduleInfo The module from which execution was triggered.
+  - @param startTime Start Date Epoch time in ms
+  - @param endTime End Date Epoch time in ms
+
 @return ResponseDtoDashboardPipelineExecution
 */
 func (a *PipelinesDashboardApiService) GetPipelineDashboardExecution(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, pipelineIdentifier string, moduleInfo string, startTime int64, endTime int64) (ResponseDtoDashboardPipelineExecution, *http.Response, error) {
@@ -146,14 +147,15 @@ func (a *PipelinesDashboardApiService) GetPipelineDashboardExecution(ctx context
 
 /*
 PipelinesDashboardApiService Fetches Pipeline Executions details for a given Interval and will be presented in day wise format
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param orgIdentifier Organization Identifier for the Entity.
- * @param projectIdentifier Project Identifier for the Entity.
- * @param pipelineIdentifier Pipeline Identifier
- * @param moduleInfo The module from which execution was triggered.
- * @param startTime Start Date Epoch time in ms
- * @param endTime End Date Epoch time in ms
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param orgIdentifier Organization Identifier for the Entity.
+  - @param projectIdentifier Project Identifier for the Entity.
+  - @param pipelineIdentifier Pipeline Identifier
+  - @param moduleInfo The module from which execution was triggered.
+  - @param startTime Start Date Epoch time in ms
+  - @param endTime End Date Epoch time in ms
+
 @return ResponseDtoDashboardPipelineExecution
 */
 func (a *PipelinesDashboardApiService) GetPipelineExecution(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, pipelineIdentifier string, moduleInfo string, startTime int64, endTime int64) (ResponseDtoDashboardPipelineExecution, *http.Response, error) {
@@ -266,14 +268,15 @@ func (a *PipelinesDashboardApiService) GetPipelineExecution(ctx context.Context,
 
 /*
 PipelinesDashboardApiService Fetches Pipeline Health data for a given Interval and will be presented in day wise format
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param orgIdentifier Organization Identifier for the Entity.
- * @param projectIdentifier Project Identifier for the Entity.
- * @param pipelineIdentifier Pipeline Identifier
- * @param moduleInfo The module from which execution was triggered.
- * @param startTime Start Date Epoch time in ms
- * @param endTime End Date Epoch time in ms
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param orgIdentifier Organization Identifier for the Entity.
+  - @param projectIdentifier Project Identifier for the Entity.
+  - @param pipelineIdentifier Pipeline Identifier
+  - @param moduleInfo The module from which execution was triggered.
+  - @param startTime Start Date Epoch time in ms
+  - @param endTime End Date Epoch time in ms
+
 @return ResponseDtoDashboardPipelineHealth
 */
 func (a *PipelinesDashboardApiService) GetPipelinedHealth(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, pipelineIdentifier string, moduleInfo string, startTime int64, endTime int64) (ResponseDtoDashboardPipelineHealth, *http.Response, error) {
@@ -386,14 +389,15 @@ func (a *PipelinesDashboardApiService) GetPipelinedHealth(ctx context.Context, a
 
 /*
 PipelinesDashboardApiService Fetches Pipeline Health data for a given Interval and will be presented in day wise format
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param orgIdentifier Organization Identifier for the Entity.
- * @param projectIdentifier Project Identifier for the Entity.
- * @param pipelineIdentifier Pipeline Identifier
- * @param moduleInfo The module from which execution was triggered.
- * @param startTime Start Date Epoch time in ms
- * @param endTime End Date Epoch time in ms
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param orgIdentifier Organization Identifier for the Entity.
+  - @param projectIdentifier Project Identifier for the Entity.
+  - @param pipelineIdentifier Pipeline Identifier
+  - @param moduleInfo The module from which execution was triggered.
+  - @param startTime Start Date Epoch time in ms
+  - @param endTime End Date Epoch time in ms
+
 @return ResponseDtoDashboardPipelineHealth
 */
 func (a *PipelinesDashboardApiService) GetPipelinedHealth1(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, pipelineIdentifier string, moduleInfo string, startTime int64, endTime int64) (ResponseDtoDashboardPipelineHealth, *http.Response, error) {

@@ -26,9 +26,10 @@ type WebhookEventHandlerApiService service
 
 /*
 WebhookEventHandlerApiService Process event payload for webhook triggers.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
- * @param accountIdentifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
+  - @param accountIdentifier
+
 @return ResponseDtoString
 */
 func (a *WebhookEventHandlerApiService) ProcessWebhookEvent(ctx context.Context, body string, accountIdentifier string) (ResponseDtoString, *http.Response, error) {

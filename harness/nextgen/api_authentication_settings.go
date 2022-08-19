@@ -28,8 +28,9 @@ type AuthenticationSettingsApiService service
 
 /*
 AuthenticationSettingsApiService Deletes SAML meta data by accountIdentifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return RestResponseSsoConfig
 */
 func (a *AuthenticationSettingsApiService) DeleteSamlMetaData(ctx context.Context, accountIdentifier string) (RestResponseSsoConfig, *http.Response, error) {
@@ -146,8 +147,9 @@ func (a *AuthenticationSettingsApiService) DeleteSamlMetaData(ctx context.Contex
 
 /*
 AuthenticationSettingsApiService Get the authentication settings by accountIdentifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return RestResponseAuthenticationSettingsResponse
 */
 func (a *AuthenticationSettingsApiService) GetAuthenticationSettings(ctx context.Context, accountIdentifier string) (RestResponseAuthenticationSettingsResponse, *http.Response, error) {
@@ -264,8 +266,9 @@ func (a *AuthenticationSettingsApiService) GetAuthenticationSettings(ctx context
 
 /*
 AuthenticationSettingsApiService Get the password strength settings by accountIdentifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return RestResponsePasswordStrengthPolicy
 */
 func (a *AuthenticationSettingsApiService) GetPasswordStrengthSettings(ctx context.Context, accountIdentifier string) (RestResponsePasswordStrengthPolicy, *http.Response, error) {
@@ -382,8 +385,9 @@ func (a *AuthenticationSettingsApiService) GetPasswordStrengthSettings(ctx conte
 
 /*
 AuthenticationSettingsApiService Get the SAML login test by accountId
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity.
+
 @return RestResponseLoginTypeResponse
 */
 func (a *AuthenticationSettingsApiService) GetSamlLoginTest(ctx context.Context, accountId string) (RestResponseLoginTypeResponse, *http.Response, error) {
@@ -500,8 +504,9 @@ func (a *AuthenticationSettingsApiService) GetSamlLoginTest(ctx context.Context,
 
 /*
 AuthenticationSettingsApiService Deletes OAuth mechanism by accountIdentifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return RestResponseBoolean
 */
 func (a *AuthenticationSettingsApiService) RemoveOauthMechanism(ctx context.Context, accountIdentifier string) (RestResponseBoolean, *http.Response, error) {
@@ -618,9 +623,10 @@ func (a *AuthenticationSettingsApiService) RemoveOauthMechanism(ctx context.Cont
 
 /*
 AuthenticationSettingsApiService Set two factor auth at account lever by accountIdentifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Boolean that specify whether or not to override two factor enabled setting
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Boolean that specify whether or not to override two factor enabled setting
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return RestResponseBoolean
 */
 func (a *AuthenticationSettingsApiService) SetTwoFactorAuthAtAccountLevel(ctx context.Context, body TwoFactorAdminOverrideSettings, accountIdentifier string) (RestResponseBoolean, *http.Response, error) {
@@ -867,9 +873,10 @@ func (a *AuthenticationSettingsApiService) UpdateAuthMechanism(ctx context.Conte
 
 /*
 AuthenticationSettingsApiService Updates the Oauth providers by accountIdentifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body This is the updated OAuthSettings. Please provide values for all fields, not just the fields you are updating
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body This is the updated OAuthSettings. Please provide values for all fields, not just the fields you are updating
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return RestResponseBoolean
 */
 func (a *AuthenticationSettingsApiService) UpdateOauthProviders(ctx context.Context, body OAuthSettings, accountIdentifier string) (RestResponseBoolean, *http.Response, error) {

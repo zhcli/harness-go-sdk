@@ -141,10 +141,9 @@ func (a *SCIMApiService) CreateUser(ctx context.Context, accountIdentifier strin
 
 /*
 SCIMApiService
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param userIdentifier
- * @param accountIdentifier
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param userIdentifier
+  - @param accountIdentifier
 */
 func (a *SCIMApiService) DeleteUser(ctx context.Context, userIdentifier string, accountIdentifier string) (*http.Response, error) {
 	var (
@@ -242,10 +241,9 @@ func (a *SCIMApiService) DeleteUser(ctx context.Context, userIdentifier string, 
 
 /*
 SCIMApiService
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param userIdentifier
- * @param accountIdentifier
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param userIdentifier
+  - @param accountIdentifier
 */
 func (a *SCIMApiService) GetUser(ctx context.Context, userIdentifier string, accountIdentifier string) (*http.Response, error) {
 	var (

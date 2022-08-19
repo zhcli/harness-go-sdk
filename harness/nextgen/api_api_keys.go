@@ -198,13 +198,12 @@ func (a *APIKeysApiService) AddAPIKey(ctx context.Context, accountIdentifier str
 /*
 APIKeysApiService Deletes an API Key
 Deletes an API key for the given identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier Unique identifier for the object in the API.
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier Unique identifier for the object in the API.
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
 */
 func (a *APIKeysApiService) DeleteAPIKey(ctx context.Context, identifier string, projectIdentifier string, environmentIdentifier string, accountIdentifier string, orgIdentifier string) (*http.Response, error) {
 	var (
@@ -326,12 +325,13 @@ func (a *APIKeysApiService) DeleteAPIKey(ctx context.Context, identifier string,
 /*
 APIKeysApiService Returns API keys
 Returns all the API Keys for the given identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier Unique identifier for the object in the API.
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier Unique identifier for the object in the API.
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+
 @return CfApiKey
 */
 func (a *APIKeysApiService) GetAPIKey(ctx context.Context, identifier string, projectIdentifier string, environmentIdentifier string, accountIdentifier string, orgIdentifier string) (CfApiKey, *http.Response, error) {

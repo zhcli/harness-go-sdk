@@ -434,8 +434,9 @@ func (a *UserApiService) CheckIfLastAdmin(ctx context.Context, accountIdentifier
 
 /*
 UserApiService Disables two-factor-auth for an user in an account
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoUserInfo
 */
 func (a *UserApiService) DisableTTwoFactorAuth(ctx context.Context, accountIdentifier string) (ResponseDtoUserInfo, *http.Response, error) {
@@ -1263,8 +1264,9 @@ func (a *UserApiService) GetCurrentGenUsers(ctx context.Context, accountIdentifi
 
 /*
 UserApiService Gets current logged in User information
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoUserInfo
 */
 func (a *UserApiService) GetCurrentUserInfo(ctx context.Context, accountIdentifier string) (ResponseDtoUserInfo, *http.Response, error) {
@@ -1381,9 +1383,10 @@ func (a *UserApiService) GetCurrentUserInfo(ctx context.Context, accountIdentifi
 
 /*
 UserApiService Gets two factor authentication settings information of the current logged in user
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier for the Entity.
- * @param authMechanism This is the authentication mechanism for the logged-in User. Two-Factor Authentication settings will be fetched for this mechanism.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param authMechanism This is the authentication mechanism for the logged-in User. Two-Factor Authentication settings will be fetched for this mechanism.
+
 @return ResponseDtoTwoFactorAuthSettingsInfo
 */
 func (a *UserApiService) GetTwoFactorAuthSettings(ctx context.Context, accountIdentifier string, authMechanism string) (ResponseDtoTwoFactorAuthSettingsInfo, *http.Response, error) {

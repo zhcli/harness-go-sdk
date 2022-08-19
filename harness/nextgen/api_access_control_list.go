@@ -26,8 +26,9 @@ type AccessControlListApiService service
 
 /*
 AccessControlListApiService Check for permission on resource(s) for a principal
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body These are the checks to perform for Access Control.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body These are the checks to perform for Access Control.
+
 @return ResponseDtoAccessCheckResponse
 */
 func (a *AccessControlListApiService) GetAccessControlList(ctx context.Context, body AccessCheckRequest) (ResponseDtoAccessCheckResponse, *http.Response, error) {

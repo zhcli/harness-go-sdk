@@ -28,9 +28,10 @@ type WebhookTriggersApiService service
 
 /*
 WebhookTriggersApiService Gets webhook event processing details for input eventId.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier
- * @param eventId
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier
+  - @param eventId
+
 @return ResponseDtoWebhookEventProcessingDetails
 */
 func (a *WebhookTriggersApiService) FetchWebhookDetails(ctx context.Context, accountIdentifier string, eventId string) (ResponseDtoWebhookEventProcessingDetails, *http.Response, error) {

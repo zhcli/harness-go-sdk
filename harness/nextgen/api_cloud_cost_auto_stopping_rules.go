@@ -30,12 +30,13 @@ type CloudCostAutoStoppingRulesApiService service
 /*
 CloudCostAutoStoppingRulesApiService List all the resources for an AutoStopping Rule
 Lists all the resources for an AutoStopping Rule for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param cloudAccountId Connector ID
- * @param region Cloud region where resources belong to
- * @param ruleId ID of the AutoStopping Rule for which you need to list the resources
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param cloudAccountId Connector ID
+  - @param region Cloud region where resources belong to
+  - @param ruleId ID of the AutoStopping Rule for which you need to list the resources
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return AllResourcesOfAccountResponse
 */
 func (a *CloudCostAutoStoppingRulesApiService) AllAutoStoppingResources(ctx context.Context, accountId string, cloudAccountId string, region string, ruleId float64, accountIdentifier string) (AllResourcesOfAccountResponse, *http.Response, error) {
@@ -137,10 +138,11 @@ func (a *CloudCostAutoStoppingRulesApiService) AllAutoStoppingResources(ctx cont
 /*
 CloudCostAutoStoppingRulesApiService Return AutoStopping Rule details
 Returns details of an AutoStopping Rule for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param ruleId ID of the AutoStopping Rule for which you need to fetch the details
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param ruleId ID of the AutoStopping Rule for which you need to fetch the details
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return InlineResponse200
 */
 func (a *CloudCostAutoStoppingRulesApiService) AutoStoppingRuleDetails(ctx context.Context, accountId string, ruleId float64, accountIdentifier string) (InlineResponse200, *http.Response, error) {
@@ -240,9 +242,10 @@ func (a *CloudCostAutoStoppingRulesApiService) AutoStoppingRuleDetails(ctx conte
 /*
 CloudCostAutoStoppingRulesApiService Return cumulative savings for all the AutoStopping Rules
 Returns cumulative savings for all the AutoStopping Rules.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return CumulativeSavingsResponse
 */
 func (a *CloudCostAutoStoppingRulesApiService) CumulativeAutoStoppingSavings(ctx context.Context, accountId string, accountIdentifier string) (CumulativeSavingsResponse, *http.Response, error) {
@@ -341,11 +344,10 @@ func (a *CloudCostAutoStoppingRulesApiService) CumulativeAutoStoppingSavings(ctx
 /*
 CloudCostAutoStoppingRulesApiService Delete an AutoStopping Rule
 Deletes an AutoStopping Rule for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param ruleId ID of the AutoStopping Rule that you want to delete
- * @param accountId Account Identifier for the Entity
- * @param accountIdentifier Account Identifier for the Entity
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ruleId ID of the AutoStopping Rule that you want to delete
+  - @param accountId Account Identifier for the Entity
+  - @param accountIdentifier Account Identifier for the Entity
 */
 func (a *CloudCostAutoStoppingRulesApiService) DeleteAutoStoppingRule(ctx context.Context, ruleId float64, accountId string, accountIdentifier string) (*http.Response, error) {
 	var (
@@ -425,10 +427,11 @@ func (a *CloudCostAutoStoppingRulesApiService) DeleteAutoStoppingRule(ctx contex
 /*
 CloudCostAutoStoppingRulesApiService Return diagnostics result of an AutoStopping Rule
 Returns the diagnostics result of an AutoStopping rule for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param ruleId ID of the AutoStopping rule for which you need to fetch the diagnostics details
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param ruleId ID of the AutoStopping rule for which you need to fetch the diagnostics details
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return ServiceDiagnosticsResponse
 */
 func (a *CloudCostAutoStoppingRulesApiService) GetAutoStoppingDiagnostics(ctx context.Context, accountId string, ruleId float64, accountIdentifier string) (ServiceDiagnosticsResponse, *http.Response, error) {
@@ -528,10 +531,11 @@ func (a *CloudCostAutoStoppingRulesApiService) GetAutoStoppingDiagnostics(ctx co
 /*
 CloudCostAutoStoppingRulesApiService Return health status of an AutoStopping Rule
 Returns health status of an AutoStopping Rule for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param ruleId ID of the AutoStopping Rule for which you need to fetch the health status
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param ruleId ID of the AutoStopping Rule for which you need to fetch the health status
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return ServiceHealthResponse
 */
 func (a *CloudCostAutoStoppingRulesApiService) HealthOfAutoStoppingRule(ctx context.Context, accountId string, ruleId float64, accountIdentifier string) (ServiceHealthResponse, *http.Response, error) {
@@ -631,9 +635,10 @@ func (a *CloudCostAutoStoppingRulesApiService) HealthOfAutoStoppingRule(ctx cont
 /*
 CloudCostAutoStoppingRulesApiService List AutoStopping Rules
 Lists all the AutoStopping rules separated by comma-separated strings.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return ServicesResponse
 */
 func (a *CloudCostAutoStoppingRulesApiService) ListAutoStoppingRules(ctx context.Context, accountId string, accountIdentifier string) (ServicesResponse, *http.Response, error) {
@@ -855,11 +860,12 @@ func (a *CloudCostAutoStoppingRulesApiService) SavingsFromAutoStoppingRule(ctx c
 /*
 CloudCostAutoStoppingRulesApiService Disable/Enable an Autostopping Rule
 Disables or enables an Autostopping Rule for the given identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountId Account Identifier for the Entity
- * @param ruleId ID of the AutoStopping rule to be enabled/disabled
- * @param disable
- * @param accountIdentifier Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountId Account Identifier for the Entity
+  - @param ruleId ID of the AutoStopping rule to be enabled/disabled
+  - @param disable
+  - @param accountIdentifier Account Identifier for the Entity
+
 @return ServicesResponse
 */
 func (a *CloudCostAutoStoppingRulesApiService) ToggleAutostoppingRule(ctx context.Context, accountId string, ruleId string, disable bool, accountIdentifier string) (ServicesResponse, *http.Response, error) {
@@ -960,10 +966,11 @@ func (a *CloudCostAutoStoppingRulesApiService) ToggleAutostoppingRule(ctx contex
 /*
 CloudCostAutoStoppingRulesApiService Create an AutoStopping Rule
 Creates a new AutoStopping Rule.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Service definition of an AutoStopping rule
- * @param accountIdentifier Account Identifier for the Entity
- * @param accountId Account Identifier for the Entity
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Service definition of an AutoStopping rule
+  - @param accountIdentifier Account Identifier for the Entity
+  - @param accountId Account Identifier for the Entity
+
 @return LwServiceResponse
 */
 func (a *CloudCostAutoStoppingRulesApiService) UpdateAutoStoppingRule(ctx context.Context, body SaveServiceRequest, accountIdentifier string, accountId string) (LwServiceResponse, *http.Response, error) {

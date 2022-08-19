@@ -29,12 +29,13 @@ type TriggersApiService service
 
 /*
 TriggersApiService Creates Trigger for triggering target pipeline identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
- * @param accountIdentifier
- * @param orgIdentifier
- * @param projectIdentifier
- * @param targetIdentifier Identifier of the target pipeline
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
+  - @param accountIdentifier
+  - @param orgIdentifier
+  - @param projectIdentifier
+  - @param targetIdentifier Identifier of the target pipeline
+
 @return ResponseDtongTriggerResponse
 */
 func (a *TriggersApiService) CreateTrigger(ctx context.Context, body string, accountIdentifier string, orgIdentifier string, projectIdentifier string, targetIdentifier string) (ResponseDtongTriggerResponse, *http.Response, error) {
@@ -446,12 +447,13 @@ func (a *TriggersApiService) GetListForTarget(ctx context.Context, accountIdenti
 
 /*
 TriggersApiService Gets the trigger by accountIdentifier, orgIdentifier, projectIdentifier, targetIdentifier and triggerIdentifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier
- * @param orgIdentifier
- * @param projectIdentifier
- * @param targetIdentifier Identifier of the target pipeline under which trigger resides
- * @param triggerIdentifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier
+  - @param orgIdentifier
+  - @param projectIdentifier
+  - @param targetIdentifier Identifier of the target pipeline under which trigger resides
+  - @param triggerIdentifier
+
 @return ResponseDtongTriggerResponse
 */
 func (a *TriggersApiService) GetTrigger(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, targetIdentifier string, triggerIdentifier string) (ResponseDtongTriggerResponse, *http.Response, error) {
@@ -572,12 +574,13 @@ func (a *TriggersApiService) GetTrigger(ctx context.Context, accountIdentifier s
 
 /*
 TriggersApiService Fetches Trigger details for a specific accountIdentifier, orgIdentifier, projectIdentifier, targetIdentifier, triggerIdentifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier
- * @param orgIdentifier
- * @param projectIdentifier
- * @param triggerIdentifier Identifier of the target pipeline
- * @param targetIdentifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier
+  - @param orgIdentifier
+  - @param projectIdentifier
+  - @param triggerIdentifier Identifier of the target pipeline
+  - @param targetIdentifier
+
 @return ResponseDtongTriggerDetailsResponseDto
 */
 func (a *TriggersApiService) GetTriggerDetails(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, triggerIdentifier string, targetIdentifier string) (ResponseDtongTriggerDetailsResponseDto, *http.Response, error) {
@@ -837,13 +840,14 @@ func (a *TriggersApiService) UpdateTrigger(ctx context.Context, body string, acc
 
 /*
 TriggersApiService Activates or deactivate trigger for pipeline with target pipeline identifier.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier
- * @param orgIdentifier
- * @param projectIdentifier
- * @param targetIdentifier Identifier of the target pipeline under which trigger resides
- * @param triggerIdentifier
- * @param status
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier
+  - @param orgIdentifier
+  - @param projectIdentifier
+  - @param targetIdentifier Identifier of the target pipeline under which trigger resides
+  - @param triggerIdentifier
+  - @param status
+
 @return ResponseDtoBoolean
 */
 func (a *TriggersApiService) UpdateTriggerStatus(ctx context.Context, accountIdentifier string, orgIdentifier string, projectIdentifier string, targetIdentifier string, triggerIdentifier string, status bool) (ResponseDtoBoolean, *http.Response, error) {

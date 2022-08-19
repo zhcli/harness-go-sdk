@@ -26,9 +26,10 @@ type SecretManagersApiService service
 
 /*
 SecretManagersApiService Gets the metadata of Secret Manager
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Details required for the creation of the Secret Manager
- * @param accountIdentifier Account Identifier for the Entity.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Details required for the creation of the Secret Manager
+  - @param accountIdentifier Account Identifier for the Entity.
+
 @return ResponseDtoSecretManagerMetadataDto
 */
 func (a *SecretManagersApiService) GetMetadata(ctx context.Context, body Invite, accountIdentifier string) (ResponseDtoSecretManagerMetadataDto, *http.Response, error) {

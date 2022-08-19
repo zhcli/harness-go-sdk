@@ -80,13 +80,14 @@ func RequiredStringFieldsSet(obj interface{}, fields []string) (bool, error) {
 // Takes an object with a list of field names and their default values.
 // Returns true if the all of the fields are set with a non-default value.
 // Example usage:
-// 		if ok, err := utils.RequiredFieldsSetWithDefaultValues(obj, map[string]interface{}{
-// 			"field1": "default1",
-// 			"field2": "default2",
-// 		})
-// 		if !ok {
-// 			panic(err)
-// 		}
+//
+//	if ok, err := utils.RequiredFieldsSetWithDefaultValues(obj, map[string]interface{}{
+//		"field1": "default1",
+//		"field2": "default2",
+//	})
+//	if !ok {
+//		panic(err)
+//	}
 func RequiredFieldsSetWithDefaultValues(obj interface{}, fieldValues map[string]interface{}) (bool, error) {
 	for fieldName, defaultValue := range fieldValues {
 		if val, ok := TryGetFieldValue(obj, fieldName); !ok || val == defaultValue {

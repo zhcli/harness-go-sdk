@@ -30,11 +30,10 @@ type TargetGroupsApiService service
 /*
 TargetGroupsApiService Creates a Target Group
 Creates a Target Group in the given Project
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
 */
 func (a *TargetGroupsApiService) CreateSegment(ctx context.Context, body interface{}, accountIdentifier string, orgIdentifier string) (*http.Response, error) {
 	var (
@@ -165,13 +164,12 @@ func (a *TargetGroupsApiService) CreateSegment(ctx context.Context, body interfa
 /*
 TargetGroupsApiService Deletes a Target Group
 Deletes a Target Group for the given ID
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
- * @param identifier Unique identifier for the object in the API.
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
-
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+  - @param identifier Unique identifier for the object in the API.
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
 */
 func (a *TargetGroupsApiService) DeleteSegment(ctx context.Context, accountIdentifier string, orgIdentifier string, identifier string, projectIdentifier string, environmentIdentifier string) (*http.Response, error) {
 	var (
@@ -640,12 +638,13 @@ func (a *TargetGroupsApiService) GetAvailableFlagsForSegment(ctx context.Context
 /*
 TargetGroupsApiService Returns Target Group details for the given identifier
 Returns Target Group details for the given ID
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
- * @param identifier Unique identifier for the object in the API.
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+  - @param identifier Unique identifier for the object in the API.
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
+
 @return Segment
 */
 func (a *TargetGroupsApiService) GetSegment(ctx context.Context, accountIdentifier string, orgIdentifier string, identifier string, projectIdentifier string, environmentIdentifier string) (Segment, *http.Response, error) {
@@ -787,12 +786,13 @@ func (a *TargetGroupsApiService) GetSegment(ctx context.Context, accountIdentifi
 /*
 TargetGroupsApiService Returns Feature Flags in a Target Group
 Returns the details of a Feature Flag in a Target Group for the given identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param accountIdentifier Account Identifier
- * @param orgIdentifier Organization Identifier
- * @param identifier Unique identifier for the object in the API.
- * @param projectIdentifier The Project identifier
- * @param environmentIdentifier Environment Identifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param accountIdentifier Account Identifier
+  - @param orgIdentifier Organization Identifier
+  - @param identifier Unique identifier for the object in the API.
+  - @param projectIdentifier The Project identifier
+  - @param environmentIdentifier Environment Identifier
+
 @return []SegmentFlag
 */
 func (a *TargetGroupsApiService) GetSegmentFlags(ctx context.Context, accountIdentifier string, orgIdentifier string, identifier string, projectIdentifier string, environmentIdentifier string) ([]SegmentFlag, *http.Response, error) {

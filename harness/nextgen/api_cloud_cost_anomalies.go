@@ -294,10 +294,11 @@ func (a *CloudCostAnomaliesApiService) ListAnomalies(ctx context.Context, accoun
 /*
 CloudCostAnomaliesApiService List Anomalies for Perspective
 Fetch anomalies for perspective
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Perspective Query
- * @param accountIdentifier Account Identifier for the Entity.
- * @param perspectiveId Unique identifier for perspective
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Perspective Query
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param perspectiveId Unique identifier for perspective
+
 @return ResponseDtoListPerspectiveAnomalyData
 */
 func (a *CloudCostAnomaliesApiService) ListPerspectiveAnomalies(ctx context.Context, body PerspectiveQueryDto, accountIdentifier string, perspectiveId string) (ResponseDtoListPerspectiveAnomalyData, *http.Response, error) {
@@ -418,10 +419,11 @@ func (a *CloudCostAnomaliesApiService) ListPerspectiveAnomalies(ctx context.Cont
 /*
 CloudCostAnomaliesApiService Report Anomaly feedback
 Mark an anomaly as true/false anomaly
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Feedback
- * @param accountIdentifier Account Identifier for the Entity.
- * @param anomalyId Unique identifier for perspective
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Feedback
+  - @param accountIdentifier Account Identifier for the Entity.
+  - @param anomalyId Unique identifier for perspective
+
 @return ResponseDtoBoolean
 */
 func (a *CloudCostAnomaliesApiService) ReportAnomalyFeedback(ctx context.Context, body AnomalyFeedback, accountIdentifier string, anomalyId string) (ResponseDtoBoolean, *http.Response, error) {

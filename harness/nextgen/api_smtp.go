@@ -29,9 +29,10 @@ type SMTPApiService service
 
 /*
 SMTPApiService Creates SMTP config
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
- * @param accountIdentifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
+  - @param accountIdentifier
+
 @return ResponseDtoNgSmtp
 */
 func (a *SMTPApiService) CreateSmtpConfig(ctx context.Context, body NgSmtp, accountIdentifier string) (ResponseDtoNgSmtp, *http.Response, error) {
@@ -150,9 +151,10 @@ func (a *SMTPApiService) CreateSmtpConfig(ctx context.Context, body NgSmtp, acco
 
 /*
 SMTPApiService Delete Smtp Config by identifier
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier Config identifier
- * @param accountIdentifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier Config identifier
+  - @param accountIdentifier
+
 @return ResponseDtoBoolean
 */
 func (a *SMTPApiService) DeleteSmtpConfig(ctx context.Context, identifier string, accountIdentifier string) (ResponseDtoBoolean, *http.Response, error) {
@@ -396,9 +398,10 @@ func (a *SMTPApiService) GetSmtpConfig(ctx context.Context, localVarOptionals *S
 
 /*
 SMTPApiService Updates the Smtp Config
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
- * @param accountIdentifier
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
+  - @param accountIdentifier
+
 @return ResponseDtoNgSmtp
 */
 func (a *SMTPApiService) UpdateSmtp(ctx context.Context, body NgSmtp, accountIdentifier string) (ResponseDtoNgSmtp, *http.Response, error) {
@@ -517,12 +520,13 @@ func (a *SMTPApiService) UpdateSmtp(ctx context.Context, body NgSmtp, accountIde
 
 /*
 SMTPApiService Tests the config&#x27;s connectivity by sending a test email
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param identifier Attribute uuid
- * @param accountId Account Identifier for the Entity.
- * @param to
- * @param subject
- * @param body
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param identifier Attribute uuid
+  - @param accountId Account Identifier for the Entity.
+  - @param to
+  - @param subject
+  - @param body
+
 @return ResponseDtoValidationResult
 */
 func (a *SMTPApiService) ValidateConnectivity(ctx context.Context, identifier string, accountId string, to string, subject string, body string) (ResponseDtoValidationResult, *http.Response, error) {

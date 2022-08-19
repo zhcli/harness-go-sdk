@@ -28,8 +28,9 @@ type SCMApiService service
 
 /*
 SCMApiService creates a Pull Request
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body Details to create a PR
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body Details to create a PR
+
 @return ResponseDtoprDetails
 */
 func (a *SCMApiService) CreatePR(ctx context.Context, body GitPrCreateRequest) (ResponseDtoprDetails, *http.Response, error) {
