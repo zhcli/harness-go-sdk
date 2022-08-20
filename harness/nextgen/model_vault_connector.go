@@ -48,6 +48,8 @@ type VaultConnector struct {
 	XvaultAwsIamServerId string `json:"xvaultAwsIamServerId,omitempty"`
 	// Boolean value to indicate if K8s Auth is used for authentication.
 	UseK8sAuth bool `json:"useK8sAuth,omitempty"`
+	// This is the path where kubernetes auth is enabled in Vault.
+	K8sAuthEndpoint string `json:"k8sAuthEndpoint,omitempty"`
 	// This is the role where K8s auth will happen.
 	VaultK8sAuthRole string `json:"vaultK8sAuthRole,omitempty"`
 	// This is the SA token path where the token is mounted in the K8s Pod.
